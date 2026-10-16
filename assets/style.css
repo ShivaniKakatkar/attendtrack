@@ -1,0 +1,242 @@
+:root {
+    --bg: #f4f6fb;
+    --c: #fff;
+    --t: #1d2433;
+    --m: #6b7385;
+    --p: #3b5bdb;
+    --ok: #2f9e44;
+    --bad: #e03131;
+    --b: #e3e7f0
+}
+
+@media(prefers-color-scheme:dark) {
+    :root {
+        --bg: #12151c;
+        --c: #1b2029;
+        --t: #e8ebf2;
+        --m: #99a1b3;
+        --b: #2a3140
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font: 16px system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--t)
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: var(--c);
+    border-bottom: 1px solid var(--b)
+}
+
+.brand {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--t)
+}
+
+a {
+    color: var(--p)
+}
+
+main {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 16px
+}
+
+.card {
+    background: var(--c);
+    border: 1px solid var(--b);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 14px
+}
+
+.center {
+    text-align: center;
+    margin-top: 60px
+}
+
+.narrow {
+    max-width: 400px;
+    margin: 40px auto
+}
+
+label {
+    display: block;
+    margin: 12px 0;
+    font-size: 14px;
+    color: var(--m)
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid var(--b);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--t);
+    font: inherit
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--p);
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit
+}
+
+.btn.alt {
+    background: #0b7285
+}
+
+.tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px
+}
+
+.tabs a,
+.pills a {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--m)
+}
+
+.tabs a.on,
+.pills a.on {
+    background: var(--p);
+    color: #fff
+}
+
+.big a {
+    font-weight: 600;
+    border: 1px solid var(--b);
+    background: var(--c)
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px
+}
+
+.pills a {
+    border: 1px solid var(--b);
+    background: var(--c);
+    font-size: 14px
+}
+
+.err {
+    color: var(--bad)
+}
+
+.ok {
+    color: var(--ok)
+}
+
+.muted,
+small {
+    color: var(--m);
+    font-size: 13px
+}
+
+.drop {
+    border: 2px dashed var(--b);
+    border-radius: 12px;
+    padding: 44px 16px;
+    text-align: center;
+    cursor: pointer
+}
+
+.drop.hot {
+    border-color: var(--p);
+    background: rgba(59, 91, 219, .08)
+}
+
+.sheet {
+    overflow: auto;
+    border: 1px solid var(--b);
+    border-radius: 8px;
+    background: var(--c)
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px
+}
+
+th,
+td {
+    border: 1px solid var(--b);
+    padding: 8px 12px;
+    text-align: center;
+    white-space: nowrap
+}
+
+thead th {
+    background: var(--bg);
+    position: sticky;
+    top: 0
+}
+
+tbody th {
+    text-align: left;
+    background: var(--bg);
+    position: sticky;
+    left: 0
+}
+
+td.p {
+    color: var(--ok);
+    background: rgba(47, 158, 68, .1)
+}
+
+td.a {
+    color: var(--bad);
+    background: rgba(224, 49, 49, .1)
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px
+}
+
+.row h3 {
+    margin: 6px 0 2px
+}
+
+.tag {
+    background: var(--bg);
+    border: 1px solid var(--b);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12px
+}
+
+[hidden] {
+    display: none !important;
+}

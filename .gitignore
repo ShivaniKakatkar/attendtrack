@@ -1,0 +1,15 @@
+# Composer packages (recreate with: composer install)
+/vendor/
+
+# Uploaded assignment files (keep only the security .htaccess)
+/uploads/*
+!/uploads/.htaccess
+
+# Files with real student data
+*.xlsx
+*.pdf
+
+# Editor and system files
+.vscode/
+.DS_Store
+Thumbs.db
